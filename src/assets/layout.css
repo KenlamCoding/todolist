@@ -1,0 +1,97 @@
+:root{
+    --first: #273842;
+    --second:#446a6b;
+    --third:#627b7f;
+    --fourth:#abbbc9;
+    --fifth:#d29f9b;
+}
+body{
+    background-image: url("../../public/background.jpeg");
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size:auto;
+    font-family: "Lucida Console", "Courier New", monospace;
+}
+h1{
+    font-size: 62px;
+}
+h2{
+    font-size: 38px;
+}
+h3{
+    margin: 35px 25px;
+    font-size: 34px;
+}
+h4{
+    font-size: 30px;
+}
+h5{
+    font-size: 26px;
+}
+h6{
+    font-size: 22px;
+}
+
+.layout{
+    border-radius: 8px;
+    background-color: var(--fourth);
+    width:70%;
+    height: fit-content;
+    min-height: 300px;
+    max-width:800px;
+    margin: 20px auto;
+    padding: 4px 8px;
+}
+
+ul{
+    list-style-type: none!important;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 0px;
+}
+
+li{
+    
+    align-items: center;
+    position: relative;
+    width: 90%;
+    height: 45px;
+    padding:5px;
+    margin: 15px auto;
+    line-height: 45px;
+}
+
+input[type=text]{
+    height: 25px;
+    width: 250px;
+    border-radius: 5px;
+    margin: 15px;
+}
+
+input[type=checkbox]{
+    height: 25px;
+    width: 25px;
+    vertical-align: middle;
+    margin: 0px 15px;
+    border: 3px solid var(--first);
+}
+
+button{
+    border: 2px solid var(--third);
+    background-color: var(--first);
+    color: white;
+    border-radius: 5px;
+    height: 35px;
+    width:55px;
+    margin: auto 15px;
+}
+
+.toDoItem{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: var(--fourth);
+    padding: 0px 20px;
+}

@@ -1,0 +1,56 @@
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--fourth);
+    border: 1px solid var(--third);
+    border-radius: 10px;
+    width:80%;
+    max-width:800px;
+    padding: 10px 15px;
+    margin: 15px auto;
+}
+
+.formSection h2{
+    width: fit-content;
+    border-bottom: 5px solid var(--fifth);
+    margin:15px auto;
+    color: var(--first);
+}
+
+.listSection{
+    border-radius: 8px;
+    background-color: white;
+    width:85%;
+    max-width:800px;
+    margin: 5px auto;
+    padding: 8px 20px;
+    max-height: 600px;
+    overflow-y:scroll;
+    
+}
+
+.addItemSection{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+}
+
+.newItemSection{
+    background-color: white;
+    
+}
+
+.listSection::-webkit-scrollbar {
+  width: 10px;
+}
+.listSection::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 20px var(--fourth);
+}
+ 
+.listSection::-webkit-scrollbar-thumb {
+  background-color: var(--second);
+  border-radius: 5px;
+  outline: 1px solid var(--second);
+}

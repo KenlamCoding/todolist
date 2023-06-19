@@ -1,14 +1,11 @@
 import {useState, useEffect} from "react";
 import NewTodoForm from './NewTodoForm';
 import TodoList  from "./TodoList";
+import "./assets/layout.css";
 function App() {
   const [todos, setTodo] = useState(JSON.parse(localStorage.getItem('todos')));
-
     useEffect(() => {
       localStorage.setItem('todos', JSON.stringify(todos));
-      return () => {
-        localStorage.setItem('todos', JSON.stringify(todos));
-      }
     }, [todos])
   function addTodo(title){
     setTodo((currentTodos) => {
@@ -21,7 +18,7 @@ function App() {
       ]
     })
   }
- 
+
   function toggleTask(id){
     setTodo((currentTodos)=>{
       return currentTodos.map(todo=>{
@@ -35,26 +32,26 @@ function App() {
       })
     })
   }
+
   function deleteTodo(id) {
-    setTodo((currentTodo)=>{
-      return currentTodo.filter(todo => todo.id!==id)
+    setTodo((currentTodos)=>{
+      
+      return currentTodos.filter(todo => {
+        console.log(todo.id !== id)
+        return todo.id !== id
+      })
     })
   }
 
-  return (
-    <>
+  return(
+    <div className = "layout">
         <NewTodoForm addTodo={addTodo}/>
-        < TodoList todos = {
-          todos
-        }
-        toggleTask = {
-          toggleTask
-        }
-        deleteTodo = {
-          deleteTodo
-        }
+        <TodoList 
+          toggleTask = {toggleTask}
+          deleteTodo = {deleteTodo}
+          todos = {todos}
         />
-    </>
+    </div>
   );
 }
 
