@@ -1,4 +1,5 @@
 import TodoItem  from "./TodoItem"
+import "./assets/list.css";
 export default function TodoList({
     todos,
     toggleTask,
@@ -6,8 +7,8 @@ export default function TodoList({
 }){
     return (
     <div className="listSection" >
-        <div>
-            {todos.length===0 && "NoThingToDo"}
+        <div className="message"> 
+            {todos.length===0 && "NothingToDo"}
         </div>
         <ul>{
             todos.map((todo, index) => {

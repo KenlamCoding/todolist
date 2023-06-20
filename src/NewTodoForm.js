@@ -1,7 +1,5 @@
 import {useState} from "react";
-import "./assets/layout.css";
-import "./assets/form.css";
-
+import Button from "./components/Button"
 export default function NewTodoForm(props){
     const [newTodo, setNewTodo] = useState("");
 
@@ -12,18 +10,21 @@ export default function NewTodoForm(props){
         setNewTodo("")
     }
     return (
-        <form className="newItemSection" onSubmit={addTodos}>
-            <div className = "formSection">
-                <h2>TodoList</h2>
-            </div>
-            <div className = "addItemSection">
-                    <input type="text" 
-                        value={newTodo}
-                        onChange={e=>setNewTodo(e.target.value)} 
-                        id="item">
-                    </input>
-                <button>Submit</button>
-            </div>
-        </form>
+        < div className = "newItemSection" >
+            <form onSubmit={addTodos}>
+                <div className = "formSection">
+                    <h2>TodoList</h2>
+                </div>
+                <div className = "addItemSection">
+                        <input type="text" 
+                            value={newTodo}
+                            onChange={e=>setNewTodo(e.target.value)} 
+                            id="item"
+                            placeholder="e.g. Take a cool shower">
+                        </input>
+                        <Button name={"Add"}/>
+                </div>
+            </form>
+        </div>
     )
 }

@@ -1,0 +1,58 @@
+.listSection{
+    border-radius: 8px;
+    background-color: var(--fourth);
+    width:85%;
+    max-width:800px;
+    margin: 15px auto;
+    padding: 8px 20px;
+    max-height: 500px;
+    overflow-y:scroll;
+}
+
+.listSection::-webkit-scrollbar {
+  width: 10px;
+}
+
+.listSection::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 20px var(--fourth);
+}
+ 
+.listSection::-webkit-scrollbar-thumb {
+  background-color: var(--second);
+  border-radius: 15px;
+  outline: 1px solid var(--second);
+}
+.toDoItem{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    border: 4px solid black;
+    border-radius: 5px;
+    background-color: var(--second);
+    color:white;
+    padding: 0px 20px;
+}
+
+.message{
+  margin:15px auto;
+  text-align: center;
+}
+
+@media (min-width: 576px) {
+
+}
+@media (min-width: 768px) { 
+    .toDoItem{
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row;
+      border: 2px solid black;
+      border-radius: 5px;
+      padding: 0px 20px;
+  }
+}
+
+@media (min-width: 992px) { }
+@media (min-width: 1200px) { }
+@media (min-width: 1400px) { }

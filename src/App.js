@@ -2,6 +2,7 @@ import {useState, useEffect} from "react";
 import NewTodoForm from './NewTodoForm';
 import TodoList  from "./TodoList";
 import "./assets/layout.css";
+import "./assets/form.css";
 function App() {
   const [todos, setTodo] = useState(JSON.parse(localStorage.getItem('todos')));
     useEffect(() => {
@@ -35,7 +36,6 @@ function App() {
 
   function deleteTodo(id) {
     setTodo((currentTodos)=>{
-      
       return currentTodos.filter(todo => {
         console.log(todo.id !== id)
         return todo.id !== id
