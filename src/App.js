@@ -1,18 +1,22 @@
 import {useState, useEffect} from "react";
+import { v4 as uuidv4 } from 'uuid';
 import NewTodoForm from './NewTodoForm';
 import TodoList  from "./TodoList";
 import "./assets/layout.css";
 import "./assets/form.css";
 function App() {
-  const [todos, setTodo] = useState(JSON.parse(localStorage.getItem('todos')));
+  const [todos, setTodo] = useState(JSON.parse(localStorage.getItem('todos'))||[]);
     useEffect(() => {
       localStorage.setItem('todos', JSON.stringify(todos));
     }, [todos])
+
+ 
+
   function addTodo(title){
     setTodo((currentTodos) => {
       return [
         ...currentTodos, {
-          id: crypto.randomUUID(),
+          id: uuidv4(),
           title,
           finished: false
         }

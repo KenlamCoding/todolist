@@ -5,20 +5,35 @@ export default function TodoList({
     toggleTask,
     deleteTodo
 }){
-    return (
-    <div className="listSection" >
-        <div className="message"> 
-            {todos.length===0 && "NothingToDo"}
-        </div>
-        <ul>{
-            todos.map((todo, index) => {
-            return(
-                <li key = {todo.id} className = "listItemSection" >
-                    <TodoItem {...todo} toggleTask={toggleTask} deleteTodo={deleteTodo}/>
-                </li>
-                )
-            })} 
-        </ul>
-    </div >
-    )
+    if (todos){
+        return (
+        <div className="listSection" >
+            <div className="message"> 
+                {/* {todos.length===0 && "NothingToDo"} */}
+            </div>
+            <ul>{
+                
+                todos.map((todo, index) => {
+                return(
+                    <li key = {todo.id} className = "listItemSection" >
+                        <TodoItem {...todo} toggleTask={toggleTask} deleteTodo={deleteTodo}/>
+                    </li>
+                    )
+                })} 
+            </ul>
+        </div >
+        )
+        }else{
+            return (
+        <div className="listSection" >
+            <div className="message"> 
+                {/* {todos.length===0 && "NothingToDo"} */}
+            </div>
+            <ul>
+                
+               
+            </ul>
+        </div >
+        )
+        }
 }
