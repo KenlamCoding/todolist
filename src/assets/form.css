@@ -12,12 +12,17 @@ form{
 
 .formSection{
   overflow:hidden;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
     
 .formSection h2{
     border-bottom: 5px solid var(--first);
     width: fit-content;
-    margin:15px auto;
+    height: fit-content;
+    margin:0px 0px 0px 30px;
     color: var(--first);
 }
 
@@ -104,7 +109,20 @@ form{
         flex-grow: 1;
         flex-basis:100px;
     }
-    
+    .formSection{
+      overflow:hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column-reverse;
+    }
+    .formSection h2{
+      border-bottom: 5px solid var(--first);
+      width: fit-content;
+      height: fit-content;
+      margin:0px 0px 0px 0px;
+      color: var(--first);
+    }
  }
 @media (min-width: 1200px) { }
 @media (min-width: 1400px) { }
