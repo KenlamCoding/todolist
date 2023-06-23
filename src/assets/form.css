@@ -13,11 +13,13 @@ form{
 .formSection{
   overflow:hidden;
   display: flex;
-  flex-direction: row;
+  flex-direction: row-reverse;
   justify-content: center;
   align-items: center;
 }
-    
+.formSection img{
+  display: none;
+}
 .formSection h2{
     border-bottom: 5px solid var(--first);
     width: fit-content;
@@ -28,7 +30,7 @@ form{
 
 .newItemSection{
   display: flex;
-  margin: 15px;
+  margin: 0px;
   align-items: center;
 }
 
@@ -77,6 +79,15 @@ form{
       flex-wrap:wrap;
       padding: 5px;
   }
+  .formSection img{
+    display: none;
+  }
+  .newItemSection{
+    display: flex;
+    margin: 15px;
+    align-items: center;
+  }
+
 }
 @media (min-width: 768px) {
 

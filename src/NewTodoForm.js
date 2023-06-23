@@ -15,7 +15,7 @@ export default function NewTodoForm(props){
             <form onSubmit={addTodos}>
 
                 <div className = "formSection">
-                    <img src = {logo} className="icon" />
+                    <img src = {logo} className="icon" alt="icon"/>
                     <h2>TodoList</h2>
                 </div>
                 <div className = "addItemSection">
