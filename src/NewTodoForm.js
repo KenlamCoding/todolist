@@ -1,8 +1,8 @@
 import {useState} from "react";
 import Button from "./components/Button"
+import InputText from "./components/InputText";
 export default function NewTodoForm(props){
     const [newTodo, setNewTodo] = useState("");
-
     function addTodos(e) {
         e.preventDefault();
         if (newTodo==="") return
@@ -16,12 +16,15 @@ export default function NewTodoForm(props){
                     <h2>TodoList</h2>
                 </div>
                 <div className = "addItemSection">
-                        <input type="text" 
-                            value={newTodo}
-                            onChange={e=>setNewTodo(e.target.value)} 
-                            id="item"
-                            placeholder="e.g. Take a cool shower">
-                        </input>
+                        <InputText newTodo={newTodo} setNewTodo={setNewTodo} />
+                        {
+                        // <input type="text" 
+                        //     value={newTodo}
+                        //     onChange={e=>setNewTodo(e.target.value)}
+                        //     id="item"
+                        //     placeholder="e.g. Take a cool shower">
+                        // </input>
+                        }
                         <Button name={"Add"}/>
                 </div>
             </form>

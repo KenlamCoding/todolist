@@ -1,5 +1,6 @@
 import {useState, useEffect} from "react";
 import { v4 as uuidv4 } from 'uuid';
+
 import NewTodoForm from './NewTodoForm';
 import TodoList  from "./TodoList";
 import "./assets/layout.css";
@@ -7,10 +8,9 @@ import "./assets/form.css";
 function App() {
   const [todos, setTodo] = useState(JSON.parse(localStorage.getItem('todos'))||[]);
     useEffect(() => {
-      localStorage.setItem('todos', JSON.stringify(todos));
+      //Sorting by name
+      localStorage.setItem('todos', JSON.stringify(todos))
     }, [todos])
-
- 
 
   function addTodo(title){
     setTodo((currentTodos) => {
@@ -21,6 +21,10 @@ function App() {
           finished: false
         }
       ]
+    })
+    setTodo((currentTodos) =>{
+      let sortTodos = [...currentTodos].sort((a, b) => a.title > b.title ? 1 : -1);
+      return sortTodos;
     })
   }
 

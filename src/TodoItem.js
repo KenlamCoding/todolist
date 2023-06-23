@@ -1,4 +1,6 @@
 import Button from './components/Button';
+import CheckedBox from './components/CheckedBox';
+
 export default function TodoItem({finished,id,title,toggleTask, deleteTodo}) 
 {
     return (
@@ -7,7 +9,19 @@ export default function TodoItem({finished,id,title,toggleTask, deleteTodo})
             {title}
         </label>
         <div className="action">
-            <input type = "checkbox" checked = {finished} onChange={e=>toggleTask(id)} ></input>
+            <CheckedBox 
+            toggleTask = {
+                toggleTask
+            }
+            checked = {
+                finished
+            }
+            id = {
+                id
+            }
+            />
+
+            {/* <input type = "checkbox" checked = {finished} onChange={e=>toggleTask(id)} ></input> */}
             <Button action={deleteTodo} id={id} name={"Achieve"} />
         </div>
     </div>
