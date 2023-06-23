@@ -1,6 +1,7 @@
 import {useState} from "react";
 import Button from "./components/Button"
 import InputText from "./components/InputText";
+import logo from "./assets/img/icon.jpg";
 export default function NewTodoForm(props){
     const [newTodo, setNewTodo] = useState("");
     function addTodos(e) {
@@ -12,7 +13,9 @@ export default function NewTodoForm(props){
     return (
         < div className = "newItemSection" >
             <form onSubmit={addTodos}>
+
                 <div className = "formSection">
+                    <img src = {logo} className="icon" />
                     <h2>TodoList</h2>
                 </div>
                 <div className = "addItemSection">
