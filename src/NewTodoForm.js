@@ -20,14 +20,6 @@ export default function NewTodoForm(props){
                 </div>
                 <div className = "addItemSection">
                         <InputText newTodo={newTodo} setNewTodo={setNewTodo} />
-                        {
-                        // <input type="text" 
-                        //     value={newTodo}
-                        //     onChange={e=>setNewTodo(e.target.value)}
-                        //     id="item"
-                        //     placeholder="e.g. Take a cool shower">
-                        // </input>
-                        }
                         <Button name={"Add"}/>
                 </div>
             </form>

@@ -7,6 +7,7 @@ import "./assets/layout.css";
 import "./assets/form.css";
 function App() {
   const [todos, setTodo] = useState(JSON.parse(localStorage.getItem('todos'))||[]);
+  console.log(localStorage.getItem('todos'))
     useEffect(() => {
       //Sorting by name
       localStorage.setItem('todos', JSON.stringify(todos))

@@ -5,7 +5,6 @@ export default function CheckedBox({
     finished
 })
 {
-   
     return(
          <div className="checkboxSection"  >
             <label>
